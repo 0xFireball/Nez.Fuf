@@ -26,13 +26,13 @@ namespace Nez.Fuf.Map
         {
         }
 
-        public FufBasicTilemap loadFromArray(string name, int[] tileData, int width, int height, TiledTileset tileset, int tileWidth,
-            int tileHeight)
+        public TiledLayer loadTileLayerFromArray(string name, int[] tileData, int width, int height,
+            TiledTileset tileset)
         {
-            var tiles = tileData.Select(x => new TiledTile(x) { tileset = tileset }).ToArray();
+            var tiles = tileData.Select(x => new TiledTile(x) {tileset = tileset}).ToArray();
             var tileLayer = createTileLayer(name, width, height, tiles);
-            
-            return this;
+
+            return tileLayer;
         }
     }
 }
