@@ -29,7 +29,7 @@ namespace Nez.Fuf.Map
         public FufBasicTilemap loadFromArray(string name, int[] tileData, int width, int height, TiledTileset tileset, int tileWidth,
             int tileHeight)
         {
-            var tiles = tileData.Select(x => new TiledTile(1) { tileset = tileset }).ToArray();
+            var tiles = tileData.Select(x => new TiledTile(x) { tileset = tileset }).ToArray();
             var tileLayer = createTileLayer(name, width, height, tiles);
             
             return this;
