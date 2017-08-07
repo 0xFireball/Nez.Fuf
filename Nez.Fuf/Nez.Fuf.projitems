@@ -20,7 +20,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualAxis.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Map\FufBasicTilemap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\KinematicBody2D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Map\FufTilemap.cs" />
   </ItemGroup>
 </Project>
