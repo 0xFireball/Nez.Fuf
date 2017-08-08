@@ -2,7 +2,7 @@
 
 namespace Nez.Fuf.Physics
 {
-    public class ProjectileBody : Component, IUpdatable
+    public abstract class ProjectileBody : Component, IUpdatable, ITriggerListener
     {
         private ProjectileMover _mover;
 
@@ -19,14 +19,21 @@ namespace Nez.Fuf.Physics
         {
             if (_mover.move(velocity * Time.deltaTime))
             {
-                onProjectileHit();
+                // onProjectileHit();
             }
         }
 
-        public virtual void onProjectileHit()
+        public abstract void onProjectileHit(Entity nt);
+
+        public void onTriggerEnter(Collider other, Collider local)
         {
-            // destroy
-            entity.destroy();
+            // -
+            onProjectileHit(other.entity);
+        }
+
+        public void onTriggerExit(Collider other, Collider local)
+        {
+            // -
         }
     }
 }
