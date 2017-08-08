@@ -18,6 +18,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Map\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Game\DamageComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\HealthComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualAxis.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Map\FufBasicTilemap.cs" />
