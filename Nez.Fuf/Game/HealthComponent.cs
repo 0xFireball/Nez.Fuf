@@ -19,5 +19,10 @@ namespace Nez.Fuf.Game
             get => 1 - (Health / MaxHealth);
             set => Health = (1 - value) * MaxHealth;
         }
+
+        public static implicit operator float(HealthComponent healthComponent)
+        {
+            return healthComponent.Health;
+        }
     }
 }

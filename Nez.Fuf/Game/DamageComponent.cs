@@ -4,11 +4,21 @@ namespace Nez.Fuf.Game
 {
     public class DamageComponent : Component
     {
-        public float Damage { get; }
+        public float Value { get; }
 
-        public DamageComponent(float damage)
+        public DamageComponent(float value)
         {
-            Damage = damage;
+            Value = value;
+        }
+
+        public void damage(HealthComponent hc)
+        {
+            hc.Health -= Value;
+        }
+        
+        public static implicit operator float(DamageComponent damageComponent)
+        {
+            return damageComponent.Value;
         }
     }
 }
