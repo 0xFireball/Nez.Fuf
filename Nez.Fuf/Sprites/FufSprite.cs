@@ -18,7 +18,7 @@ namespace Nez.Fuf.Sprites
             Down
         }
 
-        protected Facing facing;
+        public Facing facing { get; set; }
 
         public virtual void loadGraphic(string graphicAsset, bool animated = false, int width = 0, int height = 0)
         {

@@ -27,7 +27,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Physics\ProjectileBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufAnimatedSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufProjectile.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufSimpleAnimatedSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufSprite.cs" />
   </ItemGroup>
 </Project>
