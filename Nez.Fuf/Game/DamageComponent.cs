@@ -1,6 +1,4 @@
-﻿using Nez;
-
-namespace Nez.Fuf.Game
+﻿namespace Nez.Fuf.Game
 {
     public class DamageComponent : Component
     {

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.Xna.Framework.Graphics;
+﻿using System.Linq;
 using Nez.Tiled;
 
 namespace Nez.Fuf.Map
