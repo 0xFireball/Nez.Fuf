@@ -10,6 +10,16 @@ namespace Nez.Fuf.Sprites
         protected Texture2D _texture;
         protected List<Subtexture> _subtextures;
 
+        public enum Facing
+        {
+            Left,
+            Up,
+            Right,
+            Down
+        }
+
+        protected Facing facing;
+
         public virtual void loadGraphic(string graphicAsset, bool animated = false, int width = 0, int height = 0)
         {
             _texture = entity.scene.content.Load<Texture2D>(graphicAsset);
