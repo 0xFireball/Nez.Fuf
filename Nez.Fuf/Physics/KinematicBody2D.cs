@@ -23,6 +23,8 @@ namespace Nez.Fuf.Physics
 
         public float maxAngular { get; set; } = 0;
 
+        public float mass = 1.0f;
+
         public virtual void update()
         {
             updateMotion(Time.deltaTime);

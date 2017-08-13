@@ -6,7 +6,9 @@ namespace Nez.Fuf.Physics
     {
         private ProjectileMover _mover;
 
-        public Vector2 velocity = Vector2.Zero; 
+        public Vector2 velocity = Vector2.Zero;
+
+        public float mass = 1.0f;
 
         public override void initialize()
         {
