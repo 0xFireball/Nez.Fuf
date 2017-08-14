@@ -9,8 +9,6 @@ namespace Nez.Fuf.Sprites
 
         public Sprite<TAnimation> Animation => animation;
 
-        private TAnimation _facingFlipKey;
-
         private bool _flipX;
         private bool _flipY;
 
