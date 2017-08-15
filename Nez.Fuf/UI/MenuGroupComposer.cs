@@ -16,6 +16,7 @@ namespace Nez.Fuf.UI
         {
             public string Text { get; set; }
             public Action<Button> Click { get; set; }
+            public bool Enabled { get; set; } = true;
         }
 
         public MenuGroupComposer(TextButtonStyle buttonStyle, Vector2 buttonDimens, int padding)
@@ -31,6 +32,7 @@ namespace Nez.Fuf.UI
             foreach (var button in Buttons)
             {
                 var uiButton = new TextButton(button.Text, ButtonStyle);
+                uiButton.setDisabled(!button.Enabled);
                 if (button.Click != null)
                 {
                     uiButton.onClicked += button.Click;
