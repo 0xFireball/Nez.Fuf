@@ -30,5 +30,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufProjectile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\MenuGroupComposer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\TextComposer.cs" />
   </ItemGroup>
 </Project>
