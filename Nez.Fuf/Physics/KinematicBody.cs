@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace Nez.Fuf.Physics
 {
-    public class KinematicBody2D : PhysicsBody, IUpdatable
+    public class KinematicBody : PhysicsBody, IUpdatable
     {
         public Vector2 drag { get; set; } = Vector2.Zero;
         public Vector2 acceleration { get; set; } = Vector2.Zero;
