@@ -22,6 +22,16 @@ namespace Nez.Fuf.Physics
 
         public float maxAngular { get; set; } = 0;
 
+        private Vector2 _precisePosition;
+        private Vector2 _lastPosition;
+
+        public override void initialize()
+        {
+            _precisePosition = entity.position;
+            
+            base.initialize();
+        }
+
         public virtual void update()
         {
             updateMotion(Time.deltaTime);
@@ -53,6 +63,12 @@ namespace Nez.Fuf.Physics
 
         public void updateMotion(float dt)
         {
+            if (_lastPosition != entity.position)
+            {
+                // The entity teleported, the _precisePosition must be updated
+                _precisePosition = entity.position;
+            }
+            
             var velocityDelta =
                 0.5f * (computeVelocity(angularVelocity, angularAcceleration, angularDrag, maxAngular, dt) -
                         angularVelocity);
@@ -62,8 +78,10 @@ namespace Nez.Fuf.Physics
 
             (var posDelta, var velDelta) = computeLinearDeltas(dt);
 
-            entity.position += posDelta;
+            _precisePosition += posDelta;
             velocity += velDelta;
+            entity.position = _precisePosition;
+            _lastPosition = entity.position;
         }
 
         private float computeVelocity(float vel, float acc, float drg, float max, float dt)
