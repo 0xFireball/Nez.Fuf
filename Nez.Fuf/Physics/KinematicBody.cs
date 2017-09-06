@@ -12,8 +12,8 @@ namespace Nez.Fuf.Physics
 
         public float angle
         {
-            get => entity.transform.rotation;
-            set => entity.transform.rotation = value;
+            get => entity.transform.localRotation;
+            set => entity.transform.localRotation = value;
         }
 
         public float angularVelocity { get; set; } = 0;
