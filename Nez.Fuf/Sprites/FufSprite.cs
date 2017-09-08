@@ -8,6 +8,7 @@ namespace Nez.Fuf.Sprites
     public class FufSprite : Component
     {
         protected Texture2D _texture;
+        protected Sprite sprite;
         protected List<Subtexture> _subtextures;
 
         public enum Facing
@@ -30,7 +31,8 @@ namespace Nez.Fuf.Sprites
             }
             else
             {
-                entity.addComponent(new Sprite(_texture));
+                sprite = new Sprite(_texture);
+                entity.addComponent(sprite);
             }
         }
     }
