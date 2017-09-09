@@ -7,5 +7,7 @@ namespace Nez.Fuf.Physics
         public Vector2 velocity = Vector2.Zero;
 
         public float mass = 1.0f;
+
+        public Vector2 momentum => mass * velocity;
     }
 }
