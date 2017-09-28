@@ -24,6 +24,7 @@ namespace RustyPlanet.Nez.Fuf.Camera
 
         public override void onAddedToEntity()
         {
+            // set update order to very last
             entity.updateOrder = int.MaxValue;
         }
 
