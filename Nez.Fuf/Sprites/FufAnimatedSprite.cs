@@ -22,7 +22,7 @@ namespace Nez.Fuf.Sprites
             animation = entity.addComponent(new Sprite<TAnimation>(_subtextures[0]));
         }
 
-        public void setFacingFlip(TAnimation facingFlipKey, bool flipX, bool flipY)
+        public void setFacingFlip(bool flipX, bool flipY)
         {
             _flipX = flipX;
             _flipY = flipY;
