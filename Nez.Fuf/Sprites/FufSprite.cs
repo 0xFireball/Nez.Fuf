@@ -11,15 +11,7 @@ namespace Nez.Fuf.Sprites
         protected Sprite sprite;
         protected List<Subtexture> _subtextures;
 
-        public enum Facing
-        {
-            Left,
-            Up,
-            Right,
-            Down
-        }
-
-        public Facing facing { get; set; }
+        public Direction facing { get; set; }
 
         public virtual void loadGraphic(string graphicAsset, bool animated = false, int width = 0, int height = 0)
         {

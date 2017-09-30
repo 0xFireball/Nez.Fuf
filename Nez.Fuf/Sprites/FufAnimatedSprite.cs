@@ -30,8 +30,8 @@ namespace Nez.Fuf.Sprites
 
         public virtual void update()
         {
-            animation.flipX = facing == Facing.Left && _flipX;
-            animation.flipY = facing == Facing.Up && _flipY;
+            animation.flipX = facing == Direction.Left && _flipX;
+            animation.flipY = facing == Direction.Up && _flipY;
         }
     }
 }
