@@ -14,13 +14,17 @@ namespace Nez.Fuf
         public class MouseDirectionalJoystick : Nez.VirtualJoystick.Node
         {
             private Vector2 _mouseDirection;
+            private Camera _camera;
             public override Vector2 value => _mouseDirection;
+
+            public MouseDirectionalJoystick(Camera camera)
+            {
+                _camera = camera;
+            }
 
             public override void update()
             {
-                var mouseInputCenter = new Vector2(Nez.Core.graphicsManager.PreferredBackBufferWidth,
-                                           Nez.Core.graphicsManager.PreferredBackBufferHeight) / 2;
-                _mouseDirection = Nez.Input.mousePosition - mouseInputCenter;
+                _mouseDirection = (Nez.Input.mousePosition - _camera.origin) * new Vector2(1, -1);
             }
         }
     }
