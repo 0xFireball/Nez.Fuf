@@ -4,7 +4,7 @@ using Nez.Sprites;
 using Nez.Textures;
 
 namespace Nez.Fuf.Sprites {
-    public class FufSprite : Component {
+    public abstract class FufSprite : Component {
         protected Texture2D _texture;
         protected Sprite sprite;
         protected List<Subtexture> _subtextures;

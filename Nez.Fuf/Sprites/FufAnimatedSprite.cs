@@ -2,7 +2,7 @@
 using Nez.Sprites;
 
 namespace Nez.Fuf.Sprites {
-    public class FufAnimatedSprite<TAnimation> : FufSprite, IUpdatable
+    public abstract class FufAnimatedSprite<TAnimation> : FufSprite, IUpdatable
         where TAnimation : struct, IComparable, IFormattable {
         protected Sprite<TAnimation> animation;
 
