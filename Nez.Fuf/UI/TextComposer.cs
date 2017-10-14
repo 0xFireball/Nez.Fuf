@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Nez.Fuf.UI
-{
-    public class TextComposer
-    {
+namespace Nez.Fuf.UI {
+    public class TextComposer {
         public NezSpriteFont Font { get; }
         public string Text { get; set; }
 
@@ -12,23 +10,20 @@ namespace Nez.Fuf.UI
 
         public Text TextComponent => _textComponent;
 
-        public TextComposer(NezSpriteFont font)
-        {
+        public TextComposer(NezSpriteFont font) {
             Font = font;
         }
 
-        public TextComposer attach(Scene scene, Vector2 position, Color color, string entityName = null)
-        {
+        public TextComposer attach(Scene scene, Vector2 position, Color color, string entityName = null) {
             _entity = scene.createEntity(entityName, position);
             _textComponent = _entity.addComponent(new Text(Font, Text, Vector2.Zero, color));
-            
+
             return this;
         }
 
-        public TextComposer updateOffsets(Vector2 offset)
-        {
+        public TextComposer updateOffsets(Vector2 offset) {
             _textComponent.localOffset = offset;
-            
+
             return this;
         }
     }

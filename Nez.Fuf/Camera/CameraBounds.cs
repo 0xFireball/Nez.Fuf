@@ -1,36 +1,30 @@
 ﻿using Microsoft.Xna.Framework;
 using Nez;
 
-namespace RustyPlanet.Nez.Fuf.Camera
-{
-    public class CameraBounds : Component, IUpdatable
-    {
+namespace RustyPlanet.Nez.Fuf.Camera {
+    public class CameraBounds : Component, IUpdatable {
         public Vector2 min, max;
 
 
-        public CameraBounds()
-        {
+        public CameraBounds() {
             // make sure we run last so the camera is already moved before we evaluate its position
             setUpdateOrder(int.MaxValue);
         }
 
 
-        public CameraBounds(Vector2 min, Vector2 max) : this()
-        {
+        public CameraBounds(Vector2 min, Vector2 max) : this() {
             this.min = min;
             this.max = max;
         }
 
 
-        public override void onAddedToEntity()
-        {
+        public override void onAddedToEntity() {
             // set update order to very last
             entity.updateOrder = int.MaxValue;
         }
 
 
-        void IUpdatable.update()
-        {
+        void IUpdatable.update() {
             var cameraBounds = entity.scene.camera.bounds;
 
             if (cameraBounds.top < min.Y)

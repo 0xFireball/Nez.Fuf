@@ -1,17 +1,14 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
-namespace Nez.Fuf.Physics
-{
-    public class KinematicBody : PhysicsBody, IUpdatable
-    {
+namespace Nez.Fuf.Physics {
+    public class KinematicBody : PhysicsBody, IUpdatable {
         public Vector2 drag { get; set; } = Vector2.Zero;
         public Vector2 acceleration { get; set; } = Vector2.Zero;
 
         public Vector2 maxVelocity { get; set; } = Vector2.Zero;
 
-        public float angle
-        {
+        public float angle {
             get => entity.transform.localRotation;
             set => entity.transform.localRotation = value;
         }
@@ -25,20 +22,17 @@ namespace Nez.Fuf.Physics
         private Vector2 _precisePosition;
         private Vector2 _lastPosition;
 
-        public override void initialize()
-        {
+        public override void initialize() {
             _precisePosition = entity.position;
-            
+
             base.initialize();
         }
 
-        public virtual void update()
-        {
+        public virtual void update() {
             updateMotion(Time.deltaTime);
         }
 
-        public (Vector2, Vector2) computeLinearDeltas(float dt)
-        {
+        public (Vector2, Vector2) computeLinearDeltas(float dt) {
             var posDelta = Vector2.Zero;
             var velDelta = Vector2.Zero;
 
@@ -61,14 +55,12 @@ namespace Nez.Fuf.Physics
             return (posDelta, velDelta);
         }
 
-        public void updateMotion(float dt)
-        {
-            if (_lastPosition != entity.position)
-            {
+        public void updateMotion(float dt) {
+            if (_lastPosition != entity.position) {
                 // The entity teleported, the _precisePosition must be updated
                 _precisePosition = entity.position;
             }
-            
+
             var velocityDelta =
                 0.5f * (computeVelocity(angularVelocity, angularAcceleration, angularDrag, maxAngular, dt) -
                         angularVelocity);
@@ -84,37 +76,28 @@ namespace Nez.Fuf.Physics
             _lastPosition = entity.position;
         }
 
-        private float computeVelocity(float vel, float acc, float drg, float max, float dt)
-        {
-            if (Math.Abs(acc) > 0)
-            {
+        private float computeVelocity(float vel, float acc, float drg, float max, float dt) {
+            if (Math.Abs(acc) > 0) {
                 vel += acc * dt;
             }
-            else if (Math.Abs(drg) > 0)
-            {
+            else if (Math.Abs(drg) > 0) {
                 var tDrg = drg * dt;
-                if (vel - tDrg > 0)
-                {
+                if (vel - tDrg > 0) {
                     vel -= tDrg;
                 }
-                else if (vel + tDrg < 0)
-                {
+                else if (vel + tDrg < 0) {
                     vel += tDrg;
                 }
-                else
-                {
+                else {
                     vel = 0;
                 }
             }
 
-            if (Math.Abs(vel) > 0 && Math.Abs(max) > 0)
-            {
-                if (vel > max)
-                {
+            if (Math.Abs(vel) > 0 && Math.Abs(max) > 0) {
+                if (vel > max) {
                     vel = max;
                 }
-                else if (vel < -max)
-                {
+                else if (vel < -max) {
                     vel = -max;
                 }
             }

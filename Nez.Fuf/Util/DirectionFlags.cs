@@ -1,10 +1,8 @@
 ﻿using System;
 
-namespace Nez.Fuf
-{
+namespace Nez.Fuf {
     [Flags]
-    public enum DirectionFlags : int
-    {
+    public enum DirectionFlags : int {
         None = 0,
         Left = 1 << 0,
         Right = 1 << 1,
