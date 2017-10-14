@@ -79,16 +79,13 @@ namespace Nez.Fuf.Physics {
         private float computeVelocity(float vel, float acc, float drg, float max, float dt) {
             if (Math.Abs(acc) > 0) {
                 vel += acc * dt;
-            }
-            else if (Math.Abs(drg) > 0) {
+            } else if (Math.Abs(drg) > 0) {
                 var tDrg = drg * dt;
                 if (vel - tDrg > 0) {
                     vel -= tDrg;
-                }
-                else if (vel + tDrg < 0) {
+                } else if (vel + tDrg < 0) {
                     vel += tDrg;
-                }
-                else {
+                } else {
                     vel = 0;
                 }
             }
@@ -96,8 +93,7 @@ namespace Nez.Fuf.Physics {
             if (Math.Abs(vel) > 0 && Math.Abs(max) > 0) {
                 if (vel > max) {
                     vel = max;
-                }
-                else if (vel < -max) {
+                } else if (vel < -max) {
                     vel = -max;
                 }
             }

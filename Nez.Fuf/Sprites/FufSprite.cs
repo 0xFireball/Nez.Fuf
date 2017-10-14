@@ -16,8 +16,7 @@ namespace Nez.Fuf.Sprites {
 
             if (animated) {
                 _subtextures = Subtexture.subtexturesFromAtlas(_texture, width, height);
-            }
-            else {
+            } else {
                 sprite = new Sprite(_texture);
                 entity.addComponent(sprite);
             }
