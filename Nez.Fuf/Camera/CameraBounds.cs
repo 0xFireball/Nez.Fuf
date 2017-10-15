@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Nez;
 
-namespace RustyPlanet.Nez.Fuf.Camera {
+namespace Nez.Fuf.Camera {
     public class CameraBounds : Component, IUpdatable {
         public Vector2 min, max;
 

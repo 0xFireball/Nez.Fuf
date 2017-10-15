@@ -10,10 +10,10 @@ namespace Nez.Fuf {
 
         public class MouseDirectionalJoystick : Nez.VirtualJoystick.Node {
             private Vector2 _mouseDirection;
-            private Camera _camera;
+            private Nez.Camera _camera;
             public override Vector2 value => _mouseDirection;
 
-            public MouseDirectionalJoystick(Camera camera) {
+            public MouseDirectionalJoystick(Nez.Camera camera) {
                 _camera = camera;
             }
 
