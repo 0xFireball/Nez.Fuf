@@ -6,7 +6,7 @@ using Nez.Textures;
 namespace Nez.Fuf.Sprites {
     public abstract class FufSprite : Component {
         protected Texture2D _texture;
-        protected Sprite sprite;
+        public Sprite sprite;
         protected List<Subtexture> _subtextures;
 
         public Direction facing { get; set; }
