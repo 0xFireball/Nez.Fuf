@@ -19,6 +19,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Camera\CameraBounds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Display\FufBackdrop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game\DamageComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game\HealthComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualAxis.cs" />
