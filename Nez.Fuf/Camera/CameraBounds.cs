@@ -27,17 +27,14 @@ namespace Nez.Fuf.Camera {
         void IUpdatable.update() {
             var cameraBounds = entity.scene.camera.bounds;
 
-            if (cameraBounds.top < min.Y)
-                entity.scene.camera.position += new Vector2(0, min.Y - cameraBounds.top);
+            if (cameraBounds.top < min.Y) entity.scene.camera.position += new Vector2(0, min.Y - cameraBounds.top);
 
-            if (cameraBounds.left < min.X)
-                entity.scene.camera.position += new Vector2(min.X - cameraBounds.left, 0);
+            if (cameraBounds.left < min.X) entity.scene.camera.position += new Vector2(min.X - cameraBounds.left, 0);
 
             if (cameraBounds.bottom > max.Y)
                 entity.scene.camera.position += new Vector2(0, max.Y - cameraBounds.bottom);
 
-            if (cameraBounds.right > max.X)
-                entity.scene.camera.position += new Vector2(max.X - cameraBounds.right, 0);
+            if (cameraBounds.right > max.X) entity.scene.camera.position += new Vector2(max.X - cameraBounds.right, 0);
         }
     }
 }
