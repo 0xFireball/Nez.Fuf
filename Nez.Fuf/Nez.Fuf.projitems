@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualAxis.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualJoystick.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualRange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Map\FufBasicTilemap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\KinematicBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\PhysicsBody.cs" />
