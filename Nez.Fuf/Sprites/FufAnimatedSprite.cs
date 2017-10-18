@@ -18,6 +18,7 @@ namespace Nez.Fuf.Sprites {
             base.loadGraphic(graphicAsset, animated, width, height);
 
             animation = entity.addComponent(new Sprite<TAnimation>(_subtextures[0]));
+            sprite = animation;
         }
 
         public void setFacingFlip(bool flipX, bool flipY) {
