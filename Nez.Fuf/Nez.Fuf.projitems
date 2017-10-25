@@ -19,7 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Camera\CameraBounds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\FufGameContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Display\FufBackdrop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FufCore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game\DamageComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game\HealthComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Input\Virtual\VirtualAxis.cs" />
@@ -31,6 +33,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Physics\PhysicsBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\ProjectileBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Platform\DesktopPlatform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Platform\GamePlatform.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufAnimatedSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufDeferredSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufSprite.cs" />
