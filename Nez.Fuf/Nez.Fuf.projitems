@@ -30,6 +30,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Physics\KinematicBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\PhysicsBody.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Physics\ProjectileBody.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Platform\DesktopPlatform.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufAnimatedSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufDeferredSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\FufSprite.cs" />
