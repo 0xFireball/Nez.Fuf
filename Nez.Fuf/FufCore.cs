@@ -1,24 +1,19 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using Nez.Fuf.Configuration;
 using Nez.Fuf.Platform;
 
 namespace Nez.Fuf {
     public abstract class FufCore : Core {
         protected KeyboardState lastKbState;
-        protected readonly FufGameContext gameContext;
         protected GamePlatform platform;
 
         public bool fullscreenOnAltEnter = true;
 
-        protected FufCore(FufGameContext context, int width = 1280, int height = 720, bool isFullScreen = false,
+        protected FufCore(int width = 1280, int height = 720, bool isFullScreen = false,
             string windowTitle = "FFNez",
             string contentDirectory = "Content") : base(width: width, height: height, isFullScreen: isFullScreen,
             enableEntitySystems: true, windowTitle: windowTitle, contentDirectory: contentDirectory) {
-            // on-create setup
-
-            gameContext = context;
             // use "soft" fullscreen switching
             graphicsManager.HardwareModeSwitch = false;
         }
@@ -39,9 +34,6 @@ namespace Nez.Fuf {
             Window.AllowAltF4 = true;
             Window.AllowUserResizing = true;
             exitOnEscapeKeypress = false;
-
-            // Register context service
-            services.AddService(typeof(FufGameContext), gameContext);
         }
 
         /// <summary>
@@ -60,7 +52,8 @@ namespace Nez.Fuf {
 
             var kbState = Keyboard.GetState();
             if (fullscreenOnAltEnter) {
-                if (kbState.IsKeyDown(Keys.LeftAlt) && kbState.IsKeyUp(Keys.Enter) && lastKbState.IsKeyDown(Keys.Enter)) {
+                if (kbState.IsKeyDown(Keys.LeftAlt) && kbState.IsKeyUp(Keys.Enter) &&
+                    lastKbState.IsKeyDown(Keys.Enter)) {
                     graphicsManager.IsFullScreen = !graphicsManager.IsFullScreen;
                     graphicsManager.ApplyChanges();
                 }
