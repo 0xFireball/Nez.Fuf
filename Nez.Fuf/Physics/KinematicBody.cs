@@ -3,21 +3,21 @@ using Microsoft.Xna.Framework;
 
 namespace Nez.Fuf.Physics {
     public class KinematicBody : PhysicsBody, IUpdatable {
-        public Vector2 drag { get; set; } = Vector2.Zero;
-        public Vector2 acceleration { get; set; } = Vector2.Zero;
+        public Vector2 drag = Vector2.Zero;
+        public Vector2 acceleration = Vector2.Zero;
 
-        public Vector2 maxVelocity { get; set; } = Vector2.Zero;
+        public Vector2 maxVelocity = Vector2.Zero;
 
         public float angle {
             get => entity.transform.localRotation;
             set => entity.transform.localRotation = value;
         }
 
-        public float angularVelocity { get; set; } = 0;
-        public float angularDrag { get; set; } = 0;
-        public float angularAcceleration { get; set; } = 0;
+        public float angularVelocity = 0;
+        public float angularDrag = 0;
+        public float angularAcceleration = 0;
 
-        public float maxAngular { get; set; } = 0;
+        public float maxAngular = 0;
 
         private Vector2 _precisePosition;
         private Vector2 _lastPosition;
