@@ -3,7 +3,7 @@
 namespace Nez.Fuf {
     public class VirtualJoystick {
         public class LogicJoystick : Nez.VirtualJoystick.Node {
-            public override Vector2 value { get; }
+            public override Vector2 value => Value;
 
             public Vector2 Value { get; set; }
         }

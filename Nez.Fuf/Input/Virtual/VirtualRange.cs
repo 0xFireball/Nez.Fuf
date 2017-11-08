@@ -81,7 +81,7 @@ namespace Nez.Fuf {
         }
 
         public class LogicRange : Node {
-            public override int value { get; }
+            public override int value => Value;
 
             public int Value { get; set; }
 
