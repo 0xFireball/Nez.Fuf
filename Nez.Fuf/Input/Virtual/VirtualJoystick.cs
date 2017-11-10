@@ -18,7 +18,7 @@ namespace Nez.Fuf {
             }
 
             public override void update() {
-                _mouseDirection = (Nez.Input.mousePosition - _camera.origin) * new Vector2(1, -1);
+                _mouseDirection = (Nez.Input.mousePosition - _camera.origin);
             }
         }
     }
