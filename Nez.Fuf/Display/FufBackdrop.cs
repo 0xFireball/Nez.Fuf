@@ -8,6 +8,7 @@ namespace Nez.Fuf.Display {
         public ScrollingSprite scrollingSprite;
 
         public Vector2 scrollFactor = Vector2.One;
+        public Vector2 textureScale = Vector2.One;
 
         public FufBackdrop(Texture2D texture) {
             _texture = texture;
@@ -17,8 +18,9 @@ namespace Nez.Fuf.Display {
         public override void initialize() {
             base.initialize();
 
-
-            scrollingSprite = entity.addComponent(new ScrollingSprite(_texture));
+            scrollingSprite = entity.addComponent(new ScrollingSprite(_texture) {
+                textureScale = textureScale
+            });
             entity.updateOrder = int.MaxValue;
         }
 

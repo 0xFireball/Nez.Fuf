@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\TextureScaler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Camera\CameraBounds.cs" />
