@@ -70,10 +70,15 @@ namespace Nez.Fuf.Physics {
 
             (var posDelta, var velDelta) = computeLinearDeltas(dt);
 
+            posDelta = applyMotion(posDelta);
             _precisePosition += posDelta;
             velocity += velDelta;
             entity.position = _precisePosition;
             _lastPosition = entity.position;
+        }
+
+        public virtual Vector2 applyMotion(Vector2 posDelta) {
+            return posDelta;
         }
 
         private float computeVelocity(float vel, float acc, float drg, float max, float dt) {
