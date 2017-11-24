@@ -1,11 +1,11 @@
 ﻿namespace Nez.Fuf {
     public class VirtualButton {
         public class LogicButton : Nez.VirtualButton.Node {
-            public override bool isDown => Pressed;
-            public override bool isPressed => Pressed;
-            public override bool isReleased => !Pressed;
+            public override bool isDown => logicPressed;
+            public override bool isPressed => logicPressed;
+            public override bool isReleased => !logicPressed;
 
-            public bool Pressed { get; set; }
+            public bool logicPressed { get; set; }
         }
     }
 }

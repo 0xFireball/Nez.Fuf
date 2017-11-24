@@ -3,9 +3,9 @@
 namespace Nez.Fuf {
     public class VirtualJoystick {
         public class LogicJoystick : Nez.VirtualJoystick.Node {
-            public override Vector2 value => Value;
+            public override Vector2 value => logicValue;
 
-            public Vector2 Value { get; set; }
+            public Vector2 logicValue { get; set; }
         }
 
         public class MouseDirectionalJoystick : Nez.VirtualJoystick.Node {
