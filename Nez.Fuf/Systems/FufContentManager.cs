@@ -312,5 +312,9 @@ namespace Nez.Fuf.Systems {
 
             return base.OpenStream(assetName);
         }
+
+        protected override void Dispose(bool disposing) {
+            base.Dispose(disposing);
+        }
     }
 }

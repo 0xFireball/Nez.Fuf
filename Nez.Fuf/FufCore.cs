@@ -63,9 +63,16 @@ namespace Nez.Fuf {
                     graphicsManager.ApplyChanges();
                 }
             }
+
             lastKbState = kbState;
 
             base.Update(gameTime);
+        }
+
+        protected override void Dispose(bool disposing) {
+            base.Dispose(disposing);
+
+            if (disposing) { contentSource.Dispose(); }
         }
     }
 }
