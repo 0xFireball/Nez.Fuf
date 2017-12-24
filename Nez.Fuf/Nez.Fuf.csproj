@@ -35,13 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FFAssetPack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\src\LayeredTest\packages\FFAssetPack.1.0.0\lib\netstandard2.0\FFAssetPack.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\FFAssetPack.1.0.0\lib\netstandard2.0\FFAssetPack.dll</HintPath>
     </Reference>
     <Reference Include="MGLayers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\src\LayeredTest\packages\MGLayers.1.0.0\lib\netstandard2.0\MGLayers.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\MGLayers.1.0.0\lib\netstandard2.0\MGLayers.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\src\LayeredTest\packages\MonoGame.Framework.Portable.3.6.0.1625\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\MonoGame.Framework.Portable.3.6.0.1625\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
