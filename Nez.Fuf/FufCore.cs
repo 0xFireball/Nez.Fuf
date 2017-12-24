@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nez.Fuf.Platform;
+using Nez.Fuf.Systems;
 
 namespace Nez.Fuf {
     public abstract class FufCore : Core {
@@ -10,12 +11,16 @@ namespace Nez.Fuf {
 
         public bool fullscreenOnAltEnter = true;
 
+        public static FufContentManager contentSource;
+
         protected FufCore(int width = 1280, int height = 720, bool isFullScreen = false,
             string windowTitle = "FFNez",
             string contentDirectory = "Content") : base(width: width, height: height, isFullScreen: isFullScreen,
             enableEntitySystems: true, windowTitle: windowTitle, contentDirectory: contentDirectory) {
             // use "soft" fullscreen switching
             graphicsManager.HardwareModeSwitch = false;
+
+            contentSource = new FufContentManager();
         }
 
         protected override void Initialize() {
