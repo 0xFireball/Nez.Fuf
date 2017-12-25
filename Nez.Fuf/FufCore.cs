@@ -1,4 +1,5 @@
 ﻿using System;
+using MGLayers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nez.Fuf.Platform;
@@ -11,6 +12,9 @@ namespace Nez.Fuf {
 
         public bool fullscreenOnAltEnter = true;
 
+        /// <summary>
+        /// A custom content manager provided by Nez.Fuf that adds layered content loading support
+        /// </summary>
         public static FufContentManager contentSource;
 
         protected FufCore(int width = 1280, int height = 720, bool isFullScreen = false,
@@ -21,6 +25,7 @@ namespace Nez.Fuf {
             graphicsManager.HardwareModeSwitch = false;
 
             contentSource = new FufContentManager();
+            contentSource.addContentSource(new DirectoryContentSource(content.RootDirectory), 1);
         }
 
         protected override void Initialize() {
