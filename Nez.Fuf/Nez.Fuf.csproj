@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FFAssetPack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\FFAssetPack.1.0.0\lib\netstandard2.0\FFAssetPack.dll</HintPath>
+    <Reference Include="FFAssetPack, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\src\InfiniteGravity\packages\FFAssetPack.1.0.1\lib\netstandard2.0\FFAssetPack.dll</HintPath>
     </Reference>
     <Reference Include="MGLayers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)packages\MGLayers.1.0.0\lib\netstandard2.0\MGLayers.dll</HintPath>
