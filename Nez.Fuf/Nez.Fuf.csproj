@@ -74,7 +74,6 @@
     <Compile Include="Platform\DesktopPlatform.cs" />
     <Compile Include="Platform\GamePlatform.cs" />
     <Compile Include="Sprites\FufAnimatedSprite.cs" />
-    <Compile Include="Sprites\FufDeferredSprite.cs" />
     <Compile Include="Sprites\FufSprite.cs" />
     <Compile Include="UI\MenuGroupComposer.cs" />
     <Compile Include="UI\TextComposer.cs" />

@@ -11,8 +11,8 @@ namespace Nez.Fuf.Sprites {
 
         public Direction facing { get; set; }
 
-        public virtual void loadGraphic(string graphicAsset, bool animated = false, int width = 0, int height = 0) {
-            _texture = FufCore.contentSource.Load<Texture2D>(graphicAsset);
+        public FufSprite(Texture2D texture, bool animated = false, int width = 0, int height = 0) {
+            _texture = texture;
 
             if (animated) {
                 _subtextures = Subtexture.subtexturesFromAtlas(_texture, width, height);
