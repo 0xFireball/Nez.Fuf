@@ -2,23 +2,23 @@
 using Microsoft.Xna.Framework.Graphics;
 using Nez.Sprites;
 
-namespace Nez.Fuf.Display {
+namespace Nez.Fuf.Components.Display {
     public class FufBackdrop : Component, IUpdatable {
-        private readonly Texture2D _texture;
+        public readonly Texture2D texture;
         public ScrollingSprite scrollingSprite;
 
         public Vector2 scrollFactor = Vector2.One;
         public Vector2 textureScale = Vector2.One;
 
         public FufBackdrop(Texture2D texture) {
-            _texture = texture;
+            this.texture = texture;
             setUpdateOrder(int.MaxValue);
         }
 
         public override void initialize() {
             base.initialize();
 
-            scrollingSprite = entity.addComponent(new ScrollingSprite(_texture) {
+            scrollingSprite = entity.addComponent(new ScrollingSprite(texture) {
                 textureScale = textureScale
             });
             entity.updateOrder = int.MaxValue;

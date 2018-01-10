@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Nez;
 
-namespace Nez.Fuf.Camera {
+namespace Nez.Fuf.Components.Camera {
     public class CameraBounds : Component, IUpdatable {
         public Vector2 min, max;
 

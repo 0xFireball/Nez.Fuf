@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Nez.Fuf {
+namespace Nez.Fuf.Util {
     public class MouseFollow : Component, IUpdatable {
         private Vector2 offset;
 
@@ -12,7 +12,7 @@ namespace Nez.Fuf {
 
         public void update() {
             // update entity position to mouse position
-            entity.position = Input.mousePosition + offset;
+            entity.position = Nez.Input.mousePosition + offset;
         }
     }
 }

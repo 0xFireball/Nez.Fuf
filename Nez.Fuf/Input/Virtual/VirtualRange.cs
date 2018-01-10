@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework.Input;
 
-namespace Nez.Fuf {
+namespace Nez.Fuf.Input {
     /// <summary>
     /// A virtual input represented as a float between -1 and 1
     /// </summary>
@@ -73,7 +73,7 @@ namespace Nez.Fuf {
                 base.update();
 
                 for (var i = 0; i < numRowKeys.Length; i++) {
-                    if (Input.currentKeyboardState.IsKeyDown(numRowKeys[i])) lastValue = i;
+                    if (Nez.Input.currentKeyboardState.IsKeyDown(numRowKeys[i])) lastValue = i;
                 }
             }
 

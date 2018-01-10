@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nez.Fuf {
+namespace Nez.Fuf.Util {
     [Flags]
     public enum DirectionFlags : int {
         None = 0,
