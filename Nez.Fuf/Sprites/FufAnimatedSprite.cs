@@ -7,9 +7,8 @@ using Nez.Textures;
 namespace Nez.Fuf.Sprites {
     public abstract class FufAnimatedSprite<TAnimation> : FufSprite, IUpdatable
         where TAnimation : struct, IComparable, IFormattable {
-        
         protected readonly List<Subtexture> subtextures;
-        
+
         public Sprite<TAnimation> animation { get; private set; }
 
         public Direction facing { get; set; }
@@ -25,10 +24,10 @@ namespace Nez.Fuf.Sprites {
         /// <param name="height">The frame height</param>
         protected FufAnimatedSprite(Texture2D texture, int width, int height) : base(
             texture) {
-            animation = entity.addComponent(new Sprite<TAnimation>(subtextures[0]));
-            sprite = animation;
-
             subtextures = Subtexture.subtexturesFromAtlas(base.texture, width, height);
+
+            animation = new Sprite<TAnimation>(subtextures[0]);
+            sprite = animation;
         }
 
         public void setFacingFlip(bool flipX, bool flipY) {

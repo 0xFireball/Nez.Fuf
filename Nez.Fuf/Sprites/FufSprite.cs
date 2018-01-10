@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 using Nez.Sprites;
-using Nez.Textures;
 
 namespace Nez.Fuf.Sprites {
     public abstract class FufSprite : Component {
@@ -12,6 +10,11 @@ namespace Nez.Fuf.Sprites {
             this.texture = texture;
 
             sprite = new Sprite(this.texture);
+        }
+
+        public override void onAddedToEntity() {
+            base.onAddedToEntity();
+
             entity.addComponent(sprite);
         }
     }
