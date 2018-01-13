@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework.Input;
 
-namespace Nez.Fuf.Input {
+namespace Nez.Fuf {
     /// <summary>
     /// A virtual input represented as a float between -1 and 1
     /// </summary>

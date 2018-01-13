@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Nez.Fuf.Input {
+namespace Nez.Fuf {
     public class VirtualJoystick {
         public class LogicJoystick : Nez.VirtualJoystick.Node {
             public override Vector2 value => logicValue;

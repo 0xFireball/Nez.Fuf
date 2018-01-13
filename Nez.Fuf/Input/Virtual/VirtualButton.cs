@@ -1,4 +1,4 @@
-﻿namespace Nez.Fuf.Input {
+﻿namespace Nez.Fuf {
     public class VirtualButton {
         public class LogicButton : Nez.VirtualButton.Node {
             public override bool isDown => logicPressed;
