@@ -9,7 +9,7 @@
     <ProjectReference Include="..\..\FFNez\Nez.Portable\FFNez.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MGLayers" Version="1.0.0" />
+    <PackageReference Include="MGLayers" Version="1.1.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.7.0.6" />
   </ItemGroup>
 </Project>
