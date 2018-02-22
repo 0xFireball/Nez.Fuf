@@ -1,98 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7EF8EB31-B61C-4FF2-80DF-08EA2766F6C4}</ProjectGuid>
-    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nez.Fuf</RootNamespace>
-    <AssemblyName>Nez.Fuf</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FFAssetPack, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\src\InfiniteGravity\packages\FFAssetPack.1.0.2\lib\netstandard2.0\FFAssetPack.dll</HintPath>
-    </Reference>
-    <Reference Include="MGLayers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\MGLayers.1.0.0\lib\netstandard2.0\MGLayers.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\MonoGame.Framework.Portable.3.6.0.1625\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <None Remove="Content\**\*" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Camera\CameraBounds.cs" />
-    <Compile Include="Components\Display\FufBackdrop.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Systems\FufContentManager.cs" />
-    <Compile Include="Util\TextureScaler.cs" />
-    <Compile Include="Util\TileMapArrayLoader.cs" />
+    <ProjectReference Include="..\..\FFNez\Nez.Portable\FFNez.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FufCore.cs" />
-    <Compile Include="Input\Virtual\VirtualAxis.cs" />
-    <Compile Include="Input\Virtual\VirtualButton.cs" />
-    <Compile Include="Input\Virtual\VirtualJoystick.cs" />
-    <Compile Include="Input\Virtual\VirtualRange.cs" />
-    <Compile Include="Physics\KinematicBody.cs" />
-    <Compile Include="Physics\PhysicsBody.cs" />
-    <Compile Include="Physics\ProjectileBody.cs" />
-    <Compile Include="Platform\DesktopPlatform.cs" />
-    <Compile Include="Platform\GamePlatform.cs" />
-    <Compile Include="Sprites\FufAnimatedSprite.cs" />
-    <Compile Include="Sprites\FufSprite.cs" />
-    <Compile Include="UI\MenuGroupComposer.cs" />
-    <Compile Include="UI\TextComposer.cs" />
-    <Compile Include="Util\DirectionFlags.cs" />
-    <Compile Include="Util\MouseFollow.cs" />
+    <PackageReference Include="MGLayers" Version="1.0.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.7.0.6" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\FFNez\Nez.Portable\FFNez.csproj">
-      <Project>{60b7197d-d0d5-405c-90a2-a56903e9b039}</Project>
-      <Name>FFNez</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
